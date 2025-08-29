@@ -1,0 +1,9 @@
+requests
+numpy
+pandas
+yfinance
+tensorflow
+keras
+scikit-learn
+joblib
+imblearn

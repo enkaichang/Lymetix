@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lymetix - 您的股市夥伴</title>
+    <!-- 使用 Tailwind CSS 加速開發 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 使用 Google Fonts - Noto Sans TC -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            background-color: #f0f4f8; /* 淺灰色背景 */
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+        }
+        .feature-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 antialiased">
+
+    <!-- 網站主容器 -->
+    <div class="max-w-xl mx-auto min-h-screen shadow-lg rounded-xl overflow-hidden">
+        
+        <!-- 首頁區塊：標題與頭像 -->
+        <header class="gradient-bg text-white text-center p-8 rounded-b-3xl relative overflow-hidden">
+            <div class="absolute inset-0 bg-white opacity-5 rounded-b-3xl"></div>
+            <div class="relative z-10">
+                <img src="/static/images/logo.png" alt="Lymetix Logo"
+                     class="w-32 h-32 mx-auto rounded-full border-4 border-white shadow-lg mb-4">
+                <h1 class="text-4xl font-bold mb-2 tracking-wide">Lymetix</h1>
+                <p class="text-gray-300 text-lg">股市預測，掌握未來</p>
+            </div>
+        </header>
+
+        <main class="p-6 space-y-8">
+            <!-- 程式介紹區塊 -->
+            <section class="bg-white p-6 rounded-2xl shadow-md">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">Lymetix 是什麼？</h2>
+                <ul class="text-gray-600 leading-relaxed space-y-2">
+                    <li>🎯 Lymetix 是一個專注於台積電股票（2330.TW）的神經網路預測模型。</li>
+                    <li>📊 以漲、觀望、跌三種預測類別提供更精準、更科學的股市預測。</li>
+                </ul>
+            </section>
+
+            <!-- Lymetix 由來區塊 (新增) -->
+            <section class="bg-white p-6 rounded-2xl shadow-md">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">Lymetix 的由來</h2>
+                <ul class="text-gray-600 leading-relaxed space-y-2">
+                    <li>🧠 Lymetix 是由 Enkai Chang 經由 ChatGPT、Claude、Gemini 等 AI 模型輔助下，使用 Tensorflow Keras 函式庫開發的股市預測模型。</li>
+                    <li>💡 名稱 Lymetix 代表 lumen（光） + metis（智慧）變體而來。</li>
+                </ul>
+            </section>
+
+            <!-- 核心優勢區塊 -->
+            <section class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- 優勢卡片 1 -->
+                <div class="feature-card bg-white p-6 rounded-2xl shadow-md">
+                    <div class="text-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-indigo-500 mx-auto mb-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l-2 4-4 2 4 2 2 4 2-4 4-2-4-2z"/><path d="M17 19l-1 2-2 1 2 1 1 2 1-2 2-1-2-1z"/><path d="M7 10l-1 1-1 2 1-1 1 2 1-2 2-1-2-1z"/></svg>
+                        <h3 class="font-bold text-gray-800 mb-2">深度學習模型</h3>
+                        <p class="text-gray-600 text-sm">
+                            採用 LSTM、GRU 等神經網路，具備學習時間序列數據中複雜模式的能力。
+                        </p>
+                    </div>
+                </div>
+                <!-- 優勢卡片 2 -->
+                <div class="feature-card bg-white p-6 rounded-2xl shadow-md">
+                    <div class="text-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-green-500 mx-auto mb-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4z"/><path d="M19 13.5v-2a1 1 0 00-1-1h-2a1 1 0 00-1 1v2a1 1 0 001 1h2a1 1 0 001-1z"/><path d="M11 11.5v-2a1 1 0 00-1-1h-2a1 1 0 00-1 1v2a1 1 0 001 1h2a1 1 0 001-1z"/><path d="M3 9.5v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1z"/></svg>
+                        <h3 class="font-bold text-gray-800 mb-2">多維度數據分析</h3>
+                        <p class="text-gray-600 text-sm">
+                            整合多種市場數據，包含 SOX 指數、台股大盤、美元匯率等，全面評估市場動向。
+                        </p>
+                    </div>
+                </div>
+                <!-- 優勢卡片 3 -->
+                <div class="feature-card bg-white p-6 rounded-2xl shadow-md">
+                    <div class="text-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-orange-500 mx-auto mb-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                        <h3 class="font-bold text-gray-800 mb-2">即時市場連動</h3>
+                        <p class="text-gray-600 text-sm">
+                            自動獲取並處理最新數據，提供更貼近即時市場變化的預測結果。
+                        </p>
+                    </div>
+                </div>
+                <!-- 優勢卡片 4 -->
+                <div class="feature-card bg-white p-6 rounded-2xl shadow-md">
+                    <div class="text-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-purple-500 mx-auto mb-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                        <h3 class="font-bold text-gray-800 mb-2">強大的技術指標</h3>
+                        <p class="text-gray-600 text-sm">
+                            計算超過 100 種技術指標，包括 RSI、MACD、布林帶等，提供多元視角。
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 技術原理區塊 -->
+            <section class="bg-white p-6 rounded-2xl shadow-md">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">Lymetix 的運作原理</h2>
+                <ul class="text-gray-600 leading-relaxed space-y-2">
+                    <li>📈 從 Yahoo Finance 獲取<strong>台積電</strong>、<strong>費城半導體指數</strong>、<strong>台股加權指數</strong>等近 30 天數據。</li>
+                    <li>🤖 採用<strong>多層次的深度學習架構</strong>，包含 LSTM 和 GRU 兩種循環<strong>神經網路</strong>，捕捉時間序列數據中的長期依賴性。</li>
+                    <li>⚖️ <strong>模型訓練經過精心最佳化</strong>，針對「漲」和「跌」的類別給予較高的權重，確保模型能更精準地識別關鍵的市場轉折點。</li>
+                </ul>
+            </section>
+
+            <!-- 聯絡資訊區塊 -->
+            <section class="text-center p-6 rounded-2xl bg-indigo-500 text-white shadow-md">
+                <h2 class="text-2xl font-bold mb-4">加入 Lymetix，掌握股市先機！</h2>
+                <p class="text-indigo-100 mb-6 text-left">
+                    👉 立即加入我們的 Line 官方帳號，獲取每日股市分析與預測資訊。
+                </p>
+                <!-- Line 加入按鈕 -->
+                <a href="https://line.me/R/ti/p/@422bmzsl" 
+                   target="_blank" 
+                   class="inline-block bg-white text-indigo-500 font-bold py-3 px-8 rounded-full shadow-lg hover:bg-gray-100 transition duration-300 transform hover:scale-105">
+                   立即加入 Line
+                </a>
+            </section>
+
+        </main>
+        
+        <!-- 頁腳 -->
+        <footer class="text-center text-gray-400 text-sm py-4">
+            <p>&copy; 2025 Lymetix. All rights reserved.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
